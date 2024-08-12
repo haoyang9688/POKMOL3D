@@ -1,0 +1,6 @@
+FORCEFIELD   OPLS_2005
+GRIDFILE     /your-POKMOL-3D-path/Source/glide-prepared-receptors/5/glide-grid.zip
+LIGANDFILE   /your-POKMOL-3D-path/Source/prepared-ligands/5/Ligprep-output-maegz/637.maegz
+OUTPUTDIR    /your-POKMOL-3D-path/Evaluate-results/Target-binding-metrics/Glide-Docking-results/5
+PRECISION  SP
+POSE_OUTTYPE  ligandlib_sd
