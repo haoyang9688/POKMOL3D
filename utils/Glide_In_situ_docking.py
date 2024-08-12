@@ -70,7 +70,7 @@ def calculate_redocking(number_folder, docking_recepter_cwd, docking_ligand_cwd,
     #print(f"completed: {number_folder}")
 
 def glide_in_situ_docking_main(config):
-    docking_recepter_cwd = '/your_POKMOL-3D_path/Source/in-situ-prepared-receptors'
+    docking_recepter_cwd = config['POKMOL3D_path']['Source']['in-situ-prepared-receptors']
     config_output_path = config['output']['output_path']
     docking_ligand_cwd = os.path.join(config_output_path, "Target-binding-metrics", 'Prepared-add-h-ligands')
     schrodinger_path = config['docking_env']['Schrodinger_path']
