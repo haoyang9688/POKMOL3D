@@ -14,14 +14,18 @@ import pickle
 import gzip
 import subprocess
 import sys
+import yaml
 import argparse
 from argparse import Namespace
 from pathlib import Path
 import yaml
 from easydict import EasyDict
 
-# path
-sys.path.append('/data/XXXX/POKMOL3D')
+with open('config.yml', 'r') as f:
+    config = yaml.safe_load(f)
+# path    
+sys.path.append(config['POKMOL3D_path'])
+
 class Target_failure_rate_Calculator:
     def __init__(self, config):
         self.config = config
