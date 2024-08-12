@@ -45,7 +45,7 @@ conda env create -f environment.yaml
 conda activate POKMOL3D
 ```
 ### Step2:
-👇👇👇You can specify a target to generate molecules and then evaluate, and we strongly recommend all targets. In addition, The 'True' or 'False' in the config file indicates whether this metric is selected or not. Default is 'True'.
+👇👇👇You can specify one target to generate molecules and then evaluate, and we strongly recommend all targets. In addition, The 'True' or 'False' in the config file indicates whether this metric is selected or not. Default is 'True'.
 ```bash
 python run.py --config config.yml
 ```
