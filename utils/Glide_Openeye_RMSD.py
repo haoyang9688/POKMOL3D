@@ -101,11 +101,10 @@ def process_folder(digit_folder_index, input_path, output_path, rmsd_script_path
         summary_file.write(f"Processed folder: {digit_folder_index}\n")  
 
 def calculate_openeye_rmsd(config):
-    os.environ['POKMOL3D_env'] = config['POKMOL-3D_env']
     output_path = config['output']['output_path']
     input_path = os.path.join(output_path, 'General-molecular-quality-metrics', 'Uniqueness-sdf')
-    code_path = config['Code_path']
-    rmsd_script_path = os.path.join(code_path, "utils", "rmsd.py")
+    POKMOL3D_path = config['POKMOL3D_path']
+    rmsd_script_path = os.path.join(POKMOL3D_path, "utils", "rmsd.py")
     digit_folders = list(range(32))
 
     # Filter out non-existent folders before processing
