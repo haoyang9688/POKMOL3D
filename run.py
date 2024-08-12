@@ -21,7 +21,7 @@ import yaml
 from easydict import EasyDict
 
 # path
-sys.path.append('/data/XXXX/POKMOL-3D')
+sys.path.append('/data/XXXX/POKMOL3D')
 class Target_failure_rate_Calculator:
     def __init__(self, config):
         self.config = config
@@ -584,9 +584,9 @@ class MainProcessor:
     def process(self):
 
         # Path checking
-        POKMOL3D_env = config['POKMOL-3D_env']
-        if not os.path.exists(POKMOL3D_env):
-           print("POKMOL-3D_env setting error!!!")
+        POKMOL3D_path = config['POKMOL3D_path']
+        if not os.path.exists(POKMOL3D_path):
+           print("POKMOL3D_path setting error!!!")
            return None
 
         input_path = config['data']['input_path']
