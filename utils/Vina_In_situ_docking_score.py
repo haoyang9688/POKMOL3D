@@ -46,7 +46,6 @@ def merge_in_situ_docking_scores(base_dir, output_file):
 def calculate_statistics(input_file, output_dir):
     df = pd.read_csv(input_file, sep='\t', header=0)
     
-    # 计算正分子的百分比
     percentages = (df[df < 0].count() / df.count() * 100).fillna(0)
     percentage_output_file_path = os.path.join(output_dir, 'vina-fraction-of-PM.txt')
     with open(percentage_output_file_path, 'w') as percentage_output_file:
@@ -54,7 +53,6 @@ def calculate_statistics(input_file, output_dir):
         for target, percentage in percentages.items():
             percentage_output_file.write(f'{target}\t{percentage:.3f}\n')
 
-    # 过滤负值并计算均值
     df_filtered = df[df.columns[0:32]].apply(lambda x: x[x <= 0])
     df_filtered = df_filtered.dropna(axis=1, how='all')
     df_reordered = pd.DataFrame({col: df_filtered[col].dropna().reset_index(drop=True) for col in df_filtered.columns})
@@ -65,8 +63,7 @@ def calculate_statistics(input_file, output_dir):
         mean_output_file.write('Targets\tMean-value\n')
         for target, mean in means.items():
             mean_output_file.write(f'{target}\t{mean:.3f}\n')
-
-    # 计算前10个最低负值的均值
+            
     def top_10_min_negative_values_mean(series):
         negative_values = series[series < 0]
         top_10_values = negative_values.nsmallest(10)
