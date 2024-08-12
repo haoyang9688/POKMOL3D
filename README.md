@@ -50,11 +50,11 @@ conda activate POKMOL3D
 python run.py --config config.yml
 ```
 # Tips
-1. The "config.yml" file provides flexible settings for the benchmark study. The users can choose any combinations of metrics for evaluation. In Default, all metrics are recommended.
+1. The "config.yml" file provides flexible settings for the benchmark study. The users can choose any combinations of metrics for evaluation. By Default, all metrics are recommended.
 2. In the setting of Structural_3D, OPLS3 force field was set default for the preparation of minimized conformations as the ground-truth. An alternative selection is the MMFF force field.
-3. The setting of active_decover, default threshold is 0.6. It can be changed to any value in the range from 0 to 1.0.
-4. For molecular docking, only Glide and AutoDock Vina are supported by our program. They should be installed individually. To be noted, the former one is integrated in Schrodinger, which is a commercial software. So, the users should be granted a license in advance. And you need to manually set the docking_receptor_path and ". in" file path in advance.
-5. For redocking, glide is the default method. You need to manually set the docking_receptor_path and ". in" file path in advance. Another option is the qvina program in AutoDock Vina. Particularly, if the Ligprep option is set as False, the input low-energy conformations of ligands for molecular docking should be prepared by the users before running POKMOL-3D. And, a path to the location of prepared ligands should be given.
+3. As for the setting of active_decover, default molecular similarity threshold is 0.6. It can be changed to any value in the range from 0 to 1.0.
+4. For molecular docking, only Glide and AutoDock Vina are supported by our program. They should be installed individually. To be noted, the former one is integrated in Schrodinger, which is a commercial software. So, the users should be granted a license in advance.
+5. For redocking, glide is the default method. Another option is the qvina program in AutoDock Vina. Particularly, if the Ligprep option is set as False, the input low-energy conformations of ligands for molecular docking should be prepared by the users before running POKMOL-3D. And, a path to the location of prepared ligands should be given.
 6. Like redocking, the same alternative options are provided for the evaluation of In_stu-Docking and RMSD metrics. Glide is the default method.
 7. 👇👇👇The protein and ligand files processed by Schrödinger software were placed in the Targets folder.
 # Evaluation models
