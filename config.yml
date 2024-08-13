@@ -1,17 +1,17 @@
-POKMOL3D_path: '/your_POKMOL-3D_path' #example:/data/XXXX/POKMOL-3D/
+POKMOL3D_path: '/your_POKMOL3D_path' #example:/data/XXXX/POKMOL-3D/
 ###Input file,This is the default path, you can change it freely
 data:
-  input_path: '/your_POKMOL-3D_path/Model-generated-molecules'
+  input_path: "/your_POKMOL3D_path/Model-generated-molecules"
 
 output:
-  output_path: '/your_POKMOL-3D_path/Evaluate-results'
+  output_path: "/your_POKMOL3D_path/Evaluate-results"
 
 active:
-  active_data_path: '/your_POKMOL-3D_path/Source/Active'
+  active_data_path: "/your_POKMOL3D_path/Source/Active"
 
 docking_env:  
-  Schrodinger_path: "/data/XXXX/software/Schrodinger2017"
-  vina_path: "/home/XXXX/anaconda3/envs/Docking/bin/"
+  Schrodinger_path: "XXXXXXXXX" #example: "/data/XXXX/software/Schrodinger2017"
+  vina_path: "XXXXXXXXX" #example: "/home/XXXX/anaconda3/envs/Docking/bin/"
 
 evaluate:
   Target_failure_rate: True
@@ -31,13 +31,13 @@ evaluate:
 settings: # optional
   Structural_3D_settings:
   #optimization options here,#If you have optimized, please place the file in 'Model generated molecules OPLS3'
-    minimization_force_field: "OPLS3" # OPLS3/MMFF
+    minimization_force_field: "OPLS3" # OPLS3 or MMFF,The "OPLS3 or MMFF" here needs to be capitalized
 
   Active_recovery_settings:
     similarity_thresholds: [0.6]  # Set the threshold to be calculated ()
 
   Redocking_settings:
-    docking_method: "glide"  # glide or vina
+    docking_method: "glide"  # glide or vina,The "glide or vina" here needs to be uncapitalized
     ligprep: True
     #You should set path for self-prepared lignads for docking, if ligprep is False
     prepared_ligands_path: '/your_POKMOL-3D_path/Source/prepared-ligands' # .maegz for glide, .pdbqt for vina # .maegz for glide, .pdbqt for vina
@@ -47,8 +47,8 @@ settings: # optional
 
   RMSD_settings:
     redocking_method: "glide"   # glide or vina
-    rmsd_method: "openeye"  # openeye or rdkit
-    OE_LICENSE: '/data/XXXX/openeye-toolkits/oe_license.txt'
+    rmsd_method: "openeye"  # openeye or rdkit,The "openeye or rdkit" here needs to be uncapitalized
+    OE_LICENSE: "XXXXXXXXXXXXX"  #example: "/data/XXXX/openeye-toolkits/oe_license.txt"
       
     
 
