@@ -12,7 +12,7 @@ def calculate_redocking(number_folder, docking_recepter_cwd, docking_ligand_cwd,
     target_binding_metrics_folder = os.path.join(output_base_path, "Target-binding-metrics")
     docking_results_folder = os.path.join(target_binding_metrics_folder, "Glide-In-situ-Docking-results", number_folder)
     if not os.path.exists(docking_results_folder):
-        os.makedirs(docking_results_folder)
+        os.makedirs(target_binding_metrics_folder)
 
     #Retrieve the paths of all. in files in the current digital folder
     docking_config_paths = glob.glob(os.path.join(number_folder_path, "*.in"))
@@ -70,7 +70,7 @@ def calculate_redocking(number_folder, docking_recepter_cwd, docking_ligand_cwd,
     #print(f"completed: {number_folder}")
 
 def glide_in_situ_docking_main(config):
-    docking_recepter_cwd = config['POKMOL3D_path']['Source']['in-situ-prepared-receptors']
+    docking_recepter_cwd = os.path.join(config['POKMOL3D_path'], 'Source/in-situ-prepared-receptors')
     config_output_path = config['output']['output_path']
     docking_ligand_cwd = os.path.join(config_output_path, "Target-binding-metrics", 'Prepared-add-h-ligands')
     schrodinger_path = config['docking_env']['Schrodinger_path']
