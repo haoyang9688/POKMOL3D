@@ -64,7 +64,7 @@ def process_task(task):
 
 def vina_redocking_main(config):
     #Read information from the configuration file
-    docking_recepter = ['POKMOL3D_path']['Source']['vina-prepared-receptors']
+    docking_recepter = os.path.join(config['POKMOL3D_path'], 'Source/vina-prepared-receptors')
     docking_ligand = config['settings']['Redocking_settings']['prepared_ligands_path']
     config_output_path = config['output']['output_path']
     output_base_folder = os.path.join(config_output_path, 'Target-binding-metrics', 'Vina-Docking-results')
