@@ -55,7 +55,7 @@ def process_task(task):
         #print(f"error: {e}")
         pass
 def vina_in_situ_docking_main(config):
-    docking_recepter = ['POKMOL3D_path']['Source']['vina-prepared-receptors']
+    docking_recepter = os.path.join(config['POKMOL3D_path'], 'Source/vina-prepared-receptors')
     config_output_path = config['output']['output_path']
     docking_ligand = os.path.join(config_output_path, "Target-binding-metrics", 'Prepared-add-h-ligands')
     output_base_folder = os.path.join(config_output_path, 'Target-binding-metrics', 'Vina-In-situ-Docking-results')
