@@ -1,5 +1,4 @@
-POKMOL-3D_env: '/home/XXXX/anaconda3/envs/POKMOL3D'
-Code_path: '/your_POKMOL-3D_path' #example:/data/XXXX/POKMOL-3D/
+POKMOL3D_path: '/your_POKMOL-3D_path' #example:/data/XXXX/POKMOL-3D/
 ###Input file,This is the default path, you can change it freely
 data:
   input_path: '/your_POKMOL-3D_path/Model-generated-molecules'
