@@ -16,7 +16,7 @@ def calculate_redocking(number_folder, docking_recepter_cwd, docking_ligand_cwd,
     target_binding_metrics_folder = os.path.join(output_base_path, "Target-binding-metrics")
     docking_results_folder = os.path.join(target_binding_metrics_folder, "Glide-Docking-results", number_folder)
     if not os.path.exists(docking_results_folder):
-        os.makedirs(docking_results_folder)
+        os.makedirs(target_binding_metrics_folder)
 
     #Retrieve the paths of all. in files in the current digital folder
     docking_config_paths = glob.glob(os.path.join(number_folder_path, "*.in"))
@@ -65,7 +65,7 @@ def calculate_redocking(number_folder, docking_recepter_cwd, docking_ligand_cwd,
         result = subprocess.run(docking_command, cwd=number_folder_path, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 def glide_redocking_main(config):
-    docking_recepter_cwd = config['POKMOL3D_path']['Source']['glide-prepared-receptors']
+    docking_recepter_cwd = os.path.join(config['POKMOL3D_path'], 'Source/glide-prepared-receptors')
     docking_ligand_cwd = config['settings']['Redocking_settings']['prepared_ligands_path']
     config_output_path = config['output']['output_path']
     schrodinger_path = config['docking_env']['Schrodinger_path']
@@ -75,4 +75,5 @@ def glide_redocking_main(config):
 
     with Pool(processes=100) as pool:
         pool.map(process_folder, args)
+
 
