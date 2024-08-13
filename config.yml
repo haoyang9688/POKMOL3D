@@ -31,23 +31,23 @@ evaluate:
 settings: # optional
   Structural_3D_settings:
   #optimization options here,#If you have optimized, please place the file in 'Model generated molecules OPLS3'
-    minimization_force_field: "OPLS3" # OPLS3 or MMFF,The "OPLS3 or MMFF" here needs to be capitalized
+    minimization_force_field: "OPLS3" # OPLS3 or MMFF, Here needs to be capitalized
 
   Active_recovery_settings:
     similarity_thresholds: [0.6]  # Set the threshold to be calculated ()
 
   Redocking_settings:
-    docking_method: "glide"  # glide or vina,The "glide or vina" here needs to be uncapitalized
+    docking_method: "glide"  # glide or vina, Here needs to be uncapitalized
     ligprep: True
     #You should set path for self-prepared lignads for docking, if ligprep is False
-    prepared_ligands_path: '/your_POKMOL-3D_path/Source/prepared-ligands' # .maegz for glide, .pdbqt for vina # .maegz for glide, .pdbqt for vina
+    prepared_ligands_path: '/your_POKMOL-3D_path/Source/prepared-ligands' # .maegz for glide, .pdbqt for vina 
 
   In_situ_Docking_settings:  
     docking_method: "glide"   # glide or vina
 
   RMSD_settings:
     redocking_method: "glide"   # glide or vina
-    rmsd_method: "openeye"  # openeye or rdkit,The "openeye or rdkit" here needs to be uncapitalized
+    rmsd_method: "openeye"  # openeye or rdkit, Here needs to be uncapitalized
     OE_LICENSE: "XXXXXXXXXXXXX"  #example: "/data/XXXX/openeye-toolkits/oe_license.txt"
       
     
