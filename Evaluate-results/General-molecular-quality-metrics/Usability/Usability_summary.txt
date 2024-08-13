@@ -1,0 +1,3 @@
+Targets	Unique_Count	Usability_Count	Usability
+0	30	30	1.00
+Mean of Usability:	1.000

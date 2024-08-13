@@ -1,0 +1,8 @@
+General molecular quality metrics	Values
+Validity	1.000
+Usability	1.000
+Uniqueness	1.000
+QED	NA
+SA	NA
+Morgan-Interal-diversity	NA
+Scaffold-Interal-diversity	NA

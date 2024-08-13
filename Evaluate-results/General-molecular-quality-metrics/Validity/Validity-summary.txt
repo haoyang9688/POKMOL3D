@@ -1,0 +1,3 @@
+Targets	SDF_Count	Validity_count	Validity
+0	30	30	1.00
+Mean of validity:	1.000

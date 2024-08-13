@@ -1,0 +1,3 @@
+Targets	Unique_Count	Validity_count	Uniqueness
+0	30	30	1.000
+Mean of Uniqueness:	1.000
