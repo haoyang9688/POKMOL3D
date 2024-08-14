@@ -1,0 +1,55 @@
+POKMOL3D_path: '/your_POKMOL3D_path' #example:/data/XXXX/POKMOL-3D/
+###Input file,This is the default path, you can change it freely
+data:
+  input_path: "/your_POKMOL3D_path/Model-generated-molecules"
+
+output:
+  output_path: "/your_POKMOL3D_path/Evaluate-results"
+
+active:
+  active_data_path: "/your_POKMOL3D_path/Source/Active"
+
+docking_env:  
+  Schrodinger_path: "XXXXXXXXX" #example: "/data/XXXX/software/Schrodinger2017"
+  vina_path: "XXXXXXXXX" #example: "/home/XXXX/anaconda3/envs/Docking/bin/"
+
+evaluate:
+  Target_failure_rate: True
+  Sampling_success_rate: True
+  Validity: True
+  Uniqueness: True
+  Usability: True
+  QED: True
+  SA: True
+  Tdiv: True
+  structural_2D: True
+  structural_3D: True
+  active_recovery: True
+  Redocking_score: True
+  In_situ_Docking: True #Before calculation,the SDF files need to H atoms added in advance
+  RMSD: True
+settings: # optional
+  Structural_3D_settings:
+  #optimization options here,#If you have optimized, please place the file in 'Model generated molecules OPLS3'
+    minimization_force_field: "OPLS3" # OPLS3 or MMFF, Here needs to be capitalized
+
+  Active_recovery_settings:
+    similarity_thresholds: [0.6]  # Set the threshold to be calculated ()
+
+  Redocking_settings:
+    docking_method: "glide"  # glide or vina, Here needs to be uncapitalized
+    ligprep: True
+    #You should set path for self-prepared lignads for docking, if ligprep is False
+    prepared_ligands_path: '/your_POKMOL-3D_path/Source/prepared-ligands' # .maegz for glide, .pdbqt for vina 
+
+  In_situ_Docking_settings:  
+    docking_method: "glide"   # glide or vina
+
+  RMSD_settings:
+    redocking_method: "glide"   # glide or vina
+    rmsd_method: "openeye"  # openeye or rdkit, Here needs to be uncapitalized
+    OE_LICENSE: "XXXXXXXXXXXXX"  #example: "/data/XXXX/openeye-toolkits/oe_license.txt"
+      
+    
+
+
