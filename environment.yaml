@@ -168,4 +168,3 @@ dependencies:
       - scipy==1.10.1
       - six==1.16.0
       - tzdata==2024.1
-prefix: /home/XXXX/anaconda3/envs/POKMOL3D
