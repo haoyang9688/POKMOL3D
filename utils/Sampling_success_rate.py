@@ -22,7 +22,7 @@ def calculate_Sampling_success_rate(config):
         total_folders += 1  
     
         sdf_files = [f for f in os.listdir(folder) if f.endswith('.sdf')]
-        success_rate = 1 if len(sdf_files) > 2000 else 0
+        success_rate = 1 if len(sdf_files) >= 2000 else 0
         success_folder_count += success_rate
         
         results.append(f"Target\t{i}\tSampling_success_rate:\t{success_rate}\n")
