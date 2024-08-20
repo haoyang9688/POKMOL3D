@@ -6,6 +6,9 @@ def calculate_metrics(config):
     Calculate metrics for target binding.
     """
     base_path = os.path.join(config['output']['output_path'], "Target-binding-metrics")
+    # Check if the directory exists
+    if not os.path.exists(base_path):
+        return None
 
     def calculate_mean_from_file(file_path):
         """
