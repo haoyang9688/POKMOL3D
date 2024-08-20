@@ -94,7 +94,13 @@ def process_structural_metrics_3d(base_paths):
 
 def calculate_summary(config):
     #Processing 2D structural attribute indicators
-    output_path = config['output']['output_path']
+    output_path = config['output']['output_path']   
+    structural_metrics_path = os.path.join(output_path, "Structural-properties-metrics")
+    
+    # Check if "Structural-properties-metrics" directory exists
+    if not os.path.exists(structural_metrics_path):
+        return None  # Exit the function if the directory does not exist
+
     base_path_2d = os.path.join(output_path, "Structural-properties-metrics", "2D")
     output_file_2d = os.path.join(output_path, "Structural-properties-metrics", "2D-Structure-property-metrics.txt")
     keywords_2d = ['heavy-atom', 'chiral-center', 'Rings', 'Aromatic-Rings', 'Rotatable-Bonds', 'Fsp3']
