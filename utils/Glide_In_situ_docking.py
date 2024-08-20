@@ -12,7 +12,7 @@ def calculate_redocking(number_folder, docking_recepter_cwd, docking_ligand_cwd,
     target_binding_metrics_folder = os.path.join(output_base_path, "Target-binding-metrics")
     docking_results_folder = os.path.join(target_binding_metrics_folder, "Glide-In-situ-Docking-results", number_folder)
     if not os.path.exists(docking_results_folder):
-        os.makedirs(target_binding_metrics_folder)
+        os.makedirs(target_binding_metrics_folder, exist_ok=True)
 
     #Retrieve the paths of all. in files in the current digital folder
     docking_config_paths = glob.glob(os.path.join(number_folder_path, "*.in"))
