@@ -108,7 +108,7 @@ def calculate_summary(config):
     mean_values_2d = process_structural_metrics_2d(base_path_2d, keywords_2d)
     if mean_values_2d:
         with open(output_file_2d, 'w') as out_file:
-            out_file.write('3D Structure property metrics\tMean Values\n')
+            out_file.write('2D Structure property metrics\tMean Values\n')
             for key, mean_val in mean_values_2d.items():
                 out_file.write(f"{key.replace('-', ' ')}\t{mean_val if mean_val == 'NA' else f'{mean_val:.6f}'}\n")
 
