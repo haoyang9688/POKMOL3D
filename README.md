@@ -27,7 +27,7 @@ POKMOL-3D is a Comprehensive Benchmark Set on Protein Pocket Based 3D Molecular 
 |20                 | LXRB      | 3L0E     | GSK2033       |
 |21                 | M2        | 5ZKB     | AF-DX 384     |
 |22                 | mGLU5     | 6FFH     | Fenobam       |
-|23                 | MMP2      | 1MMB     | Batimastat    |
+|23                 | MMP8      | 1MMB     | Batimastat    |
 |24                 | NAMPT     | 2GVJ     | Daporinad     |
 |25                 | PDE4      | 1XLX     | Cilomilast    |
 |26                 | PI3K-alpha| 7PG6     | Alpelisib     |
