@@ -108,7 +108,7 @@ dependencies:
   - nss=3.103=h593d115_0
   - numpy=1.24.4=py38h59b608b_0
   - openbabel=3.1.1=py38h8a87c98_9
-  - openeye-toolkits=2020.2.4=py38_0
+  #- openeye-toolkits=2020.2.4=py38_0
   - openssl=3.3.1=h4bc722e_2
   - packaging=24.1=pyhd8ed1ab_0
   - pcre2=10.44=h0f59acf_0
