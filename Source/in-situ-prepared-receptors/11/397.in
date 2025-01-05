@@ -1,0 +1,7 @@
+FORCEFIELD   OPLS_2005
+GRIDFILE     /your-POKMOL-3D-path/Source/in-situ-prepared-receptors/11/glide-grid.zip
+LIGANDFILE   /your-POKMOL-3D-path/Evaluate-results/Target-binding-metrics/Prepared-add-h-ligands/11/397.sdf
+OUTPUTDIR    /your-POKMOL-3D-path/Evaluate-results/Target-binding-metrics/Glide-In-situ-Docking-results/11
+PRECISION  SP
+POSE_OUTTYPE  ligandlib_sd
+DOCKING_METHOD inplace

@@ -1,0 +1,31 @@
+REMARK SMILES CC1=CC(c2c(O)cccc2O)=CC1=O
+REMARK SMILES IDX 5 1 6 2 11 3 8 4 10 5 9 6 4 7 1 8 2 9 3 10 14 11 13 12 15 13
+REMARK SMILES IDX 7 14 12 16
+REMARK H PARENT 7 15 12 17
+REMARK Flexibility Score: inf
+ROOT
+ATOM      1  C   UNL     1      28.160   1.585   4.179  1.00  0.00     0.065 A 
+ATOM      2  C   UNL     1      29.352   1.769   4.585  1.00  0.00     0.127 A 
+ATOM      3  C   UNL     1      27.734   0.175   3.893  1.00  0.00     0.127 A 
+ATOM      4  C   UNL     1      30.334   0.749   4.275  1.00  0.00     0.047 A 
+ATOM      5  C   UNL     1      28.677  -0.798   3.733  1.00  0.00     0.047 A 
+ATOM      6  C   UNL     1      30.003  -0.513   3.977  1.00  0.00     0.008 A 
+ENDROOT
+BRANCH   1   7
+ATOM      7  C   UNL     1      27.079   2.545   4.260  1.00  0.00    -0.007 C 
+ATOM      8  C   UNL     1      26.347   6.095   3.725  1.00  0.00     0.048 C 
+ATOM      9  C   UNL     1      26.197   4.784   3.953  1.00  0.00    -0.003 C 
+ATOM     10  C   UNL     1      27.397   3.921   3.862  1.00  0.00     0.016 C 
+ATOM     11  C   UNL     1      25.034   4.184   4.421  1.00  0.00     0.182 C 
+ATOM     12  C   UNL     1      25.712   2.432   4.535  1.00  0.00     0.061 C 
+ATOM     13  O   UNL     1      23.986   4.408   4.706  1.00  0.00    -0.290 OA
+ENDBRANCH   1   7
+BRANCH   2  14
+ATOM     14  O   UNL     1      29.777   2.909   5.242  1.00  0.00    -0.507 OA
+ATOM     15  H   UNL     1       0.000   0.000   0.000  1.00  0.00     0.293 HD
+ENDBRANCH   2  14
+BRANCH   3  16
+ATOM     16  O   UNL     1      26.393  -0.226   3.673  1.00  0.00    -0.507 OA
+ATOM     17  H   UNL     1       0.000   0.000   0.000  1.00  0.00     0.293 HD
+ENDBRANCH   3  16
+TORSDOF 3
