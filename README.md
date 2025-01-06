@@ -77,5 +77,5 @@ POKMOL3D relies on several other tools to function. Here are the links to them:
 - [Numpy](https://github.com/numpy/numpy)
 - [Pandas](https://github.com/pandas-dev/pandas)
 - [Seaborn](https://github.com/mwaskom/seaborn)
- # Paper
+ # The preprint
  - [DOI](https://chemrxiv.org/engage/chemrxiv/article-details/66bb0911a4e53c48763ac057)
