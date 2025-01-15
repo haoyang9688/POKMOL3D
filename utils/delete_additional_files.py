@@ -2,7 +2,7 @@ import os
 import re
 
 def delete_additional_files(config):
-    directory = config['Code_path']
+    directory = config['POKMOL3D_path']
     
     pattern_starts_with_server = re.compile(r'.*(localhost-|server-).*')
     pattern_ends_with_log = re.compile(r'\d+\.log$')
